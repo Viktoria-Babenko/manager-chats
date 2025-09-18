@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Хаб обязательных чатов менеджера — Expert X</title>
+  <style>
+:root{ --bg:#0f1220; --card:#171a2b; --muted:#8ea0b5; --text:#eaf2ff; --accent:#4fd1c5; --accent2:#ffd166; --danger:#ff6b6b; --ok:#7bed9f; --link:#7aa2ff; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg, rgba(23,26,43,.95), rgba(23,26,43,.65));backdrop-filter: blur(6px);border-bottom:1px solid #22263d;}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+h1{margin:8px 0 0 0;font-size:26px}
+.subtitle{margin:6px 0 12px 0;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:300px 1fr;gap:18px}
+.side{position:sticky;top:74px;align-self:start;background:var(--card);padding:14px;border:1px solid #22263d;border-radius:12px;}
+.side h3{margin:0 0 10px 0;font-size:15px;color:var(--accent)}
+.side details{border:1px solid #2a2f4a;border-radius:10px;margin:8px 0;background:#0f1322}
+.side summary{cursor:pointer;padding:10px 12px;list-style:none;font-weight:600}
+.side summary::marker{display:none}
+.side ul{list-style:none;margin:0;padding:0 0 10px 12px}
+.side li{margin:6px 0}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid #2a2f4a;color:var(--muted)}
+section.card{background:var(--card);padding:18px;border:1px solid #22263d;border-radius:14px;margin:0 0 16px 0;}
+section.card h2{margin:0 0 8px 0;font-size:20px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.row .pill{border:1px solid #2a2f4a;border-radius:999px;padding:6px 10px;font-size:12px;color:var(--muted)}
+.what, .template, .notes{margin-top:10px}
+.what h4,.template h4,.notes h4{margin:0 0 8px 0;color:var(--accent2);font-size:14px}
+.what ul{margin:0 0 0 18px;padding:0}
+.what li{margin:6px 0}
+textarea{width:100%;min-height:160px;padding:12px;border-radius:10px;border:1px solid #2a2f4a;background:#0f1322;color:var(--text);resize:vertical;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,"Ubuntu Mono",Consolas,monospace}
+.linkbox{background:#0f1322;border:1px dashed #2a2f4a;border-radius:10px;padding:10px;margin:8px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.legend{display:flex;gap:8px;flex-wrap:wrap}
+.legend .legend-item{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--muted)}
+.legend .dot{width:10px;height:10px;border-radius:50%}
+.dot.ok{background:var(--ok)} .dot.warn{background:var(--accent2)} .dot.bad{background:var(--danger)} .dot.info{background:var(--link)}
+.foot{color:var(--muted);font-size:12px;margin-top:20px;text-align:center}
+.kbd{font-family:ui-monospace,monospace;background:#0f1322;border:1px solid #2a2f4a;border-radius:6px;padding:2px 6px}
+@media (max-width:900px){.grid{grid-template-columns:1fr} .side{position:static}}
+
+/* Sales flow */
+.flowlist{display:grid;grid-template-columns:1fr;gap:12px;margin-top:10px}
+.flow-item{border:1px solid #2a2f4a;border-radius:12px;background:#0f1322}
+.flow-item summary{padding:12px 14px;cursor:pointer;font-weight:700}
+.flow-item ul{margin:8px 0 14px 28px}
+.step-badges{display:none}
+.badge{font-size:12px;border:1px solid #2a2f4a;border-radius:999px;padding:3px 8px;color:var(--muted)}
+.step{margin:8px 14px;padding:10px 12px;border-left:3px solid #2a2f4a;background:#0f1322;border-radius:8px}
+.step strong{color:#ffd166}
+.paygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin:6px 0 8px 0}
+.payitem{border:1px solid #2a2f4a;border-radius:8px;padding:8px 10px;background:#0f1322}
+.payitem h5{margin:0 0 4px 0;font-size:13px;color:#eaf2ff}
+.payitem p{margin:0;font-size:12px;color:#8ea0b5}
+.link-out{font-weight:600}
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Хаб обязательных чатов менеджера</h1>
+      <div class="subtitle">Структура, что куда отправлять, и шаблоны отчётов. Обновлено: 18.09.2025</div>
+    </div>
+  </header>
+
+  <div class="container grid">
+    <nav class="side">
+      <h3>Навигация</h3>
+
+      <details>
+        <summary>Основные чаты</summary>
+        <ul>
+          <li><a href="https://t.me/+1cQMbNKpqBllMGJi" target="_blank" rel="noopener">Общий чат школы</a></li>
+          <li><a href="https://t.me/+Zus5twaZE7o3YTUy" target="_blank" rel="noopener">Отзывы</a></li>
+          <li><a href="https://t.me/+wpCEF_j-_-E4ODU6" target="_blank" rel="noopener">Сертификаты от университета</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Global Pro</summary>
+        <ul>
+          <li><a href="https://t.me/+Dj0KY9PTAYdhOTQy" target="_blank" rel="noopener">Глобал Про — пакеты</a></li>
+          <li><a href="https://t.me/+Ry7QNJGgmStkMzBi" target="_blank" rel="noopener">Глобал Про Макс — пакеты</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Программы</summary>
+        <ul>
+          <li><a href="https://t.me/+JJJAcDVQcVVmNWIy" target="_blank" rel="noopener">Зумы в мини‑программах</a></li>
+          <li><a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank" rel="noopener">Группа Мини‑MBA</a></li>
+          <li><a href="https://t.me/+_cglNS4YA70zOTQy" target="_blank" rel="noopener">Онлайн‑обучение</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Оффлайн</summary>
+        <ul>
+          <li><a href="https://t.me/+ple4G9KxQt9mMWFi" target="_blank" rel="noopener">Оффлайн‑обучение</a></li>
+          <li><a href="https://t.me/+XHx0TMmpd8A5ZjJi" target="_blank" rel="noopener">Оффлайн‑мероприятия</a></li>
+        </ul>
+      </details>
+    </nav>
+
+    <main>
+
+      <section id="sales-nav" class="card">
+        <h2>Навигация из продажи → пошагово</h2>
+        <p class="subtitle">Во всех кейсах: <strong>Шаг 1</strong> фиксируем статус (бронь/предоплата/оплата) и заполняем форму в Чате оплат. <strong>Шаг 2</strong> — «последний чек → полная» + профильные группы.</p>
+
+        <div class="flowlist">
+<details class="flow-item">
+  <summary>1) Курс / мини‑курс, базовый (без Zoom и дипломов)</summary>
+  <div class="step"><strong>Шаг </strong><ul><li>Статусы: бронь → предоплата → оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму (ссылка в чате оплат )</li></ul></div>
+ </details>
+<details class="flow-item">
+  <summary>2) Онлайн‑поток продан</summary>
+  <div class="step"><strong>Шаг </strong><ul><li>Статусы: бронь → предоплата → оплата → последний чек → полная оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
+<li><a href="https://t.me/+_cglNS4YA70zOTQy" target="_blank">Онлайн‑обучение</a> — подключение к потоку</li></ul></div>
+</details>
+<details class="flow-item">
+  <summary>3) Оффлайн продан</summary>
+  <div class="step"><strong>Шаг </strong><ul><li>Статусы: бронь → предоплата → оплата → последний чек → полная оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
+<li><a href="https://t.me/+ple4G9KxQt9mMWFi" target="_blank">Оффлайн‑обучение</a></li></ul></div>
+</details>
+<details class="flow-item">
+  <summary>4) Диплом Mini‑MBA продан</summary>
+  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li></ul></div>
+  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
+<li><a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> (тип диплома: оригинал/электронный)</li></ul></div>
+</details>
+<details class="flow-item">
+  <summary>5) Продан премиум</summary>
+  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li></ul></div>
+  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
+<li><a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a></li></ul></div>
+</details>
+<details class="flow-item">
+  <summary>6) Комплекс с Zoom и Mini‑MBA</summary>
+  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li></ul></div>
+  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
+<li><a href="https://t.me/+JJJAcDVQcVVmNWIy" target="_blank">Зумы в мини‑программах</a> + <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a></li></ul></div>
+</details>
+<details class="flow-item">
+  <summary>7) Продажа Global Pro</summary>
+  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
+<li><a href="https://t.me/+Dj0KY9PTAYdhOTQy" target="_blank">Глобал Про — пакеты</a> </li></ul></div>
+  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
+<li><a href="https://t.me/+Dj0KY9PTAYdhOTQy" target="_blank">Глобал Про — пакеты</a> → <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> → <a href="https://t.me/+wpCEF_j-_-E4ODU6" target="_blank">Сертификаты от университета</a></li></ul></div>
+</details>
+<details class="flow-item">
+  <summary>8) Продажа Global Pro Max</summary>
+  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
+<li><a href="https://t.me/+Ry7QNJGgmStkMzBi" target="_blank">Глобал Про Макс — пакеты</a></li></ul></div>
+  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
+<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
+<li><a href="https://t.me/+Ry7QNJGgmStkMzBi" target="_blank">Глобал Про Макс — пакеты</a> → <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> → <a href="https://t.me/+wpCEF_j-_-E4ODU6" target="_blank">Сертификаты от университета</a></li></ul></div>
+</details>
+
+        </div>
+      </section>
+
+      <section id="pay-group" class="card">
+        <h2>Группа отдела оплат (первая точка отправки)</h2>
+        <div class="linkbox">
+          <div><span class="dot ok"></span> Сюда — все оплаты, предоплаты, брони</div>
+          <div class="tag">Обязательная</div>
+        </div>
+        <div class="template">
+          <h4>Шаблон отчёта по оплате / предоплате</h4>
+          <textarea readonly>
+ФИО клиента: [Фамилия Имя Отчество]
+Email: [email@example.com]
+Ник в Telegram: @[ник]
+Телефон: [+380...]
+Страна , город
+
+[ВИД ОПЛАТЫ] ФОП .../Оплата частями (Моно/Приват)/Оплата частями от школы/Картой/PayPal
+[ОПЛАТА] сумма/валюта 
+[ОСТАТОК] сумма/валюта 
+
+[ПРОДУКТ] название/пакет
+[ЧТО ОТКРЫТЬ] название 
+
+Направление
+БОНУС Фамилия
+Форма+ (ссылка внутри чата оплат)
+
+Вложения: 
+— Скрин оплаты
+— Скрин программы/пакета (если требуется)
+          </textarea>
+        </div>
+      </section>
+
+      <div class="foot">© Expert X · Хаб чатов менеджера · 18.09.2025</div>
+    </main>
+  </div>
+</body>
+</html>
