@@ -54,6 +54,29 @@ textarea{width:100%;min-height:160px;padding:12px;border-radius:10px;border:1px 
 .payitem h5{margin:0 0 4px 0;font-size:13px;color:#eaf2ff}
 .payitem p{margin:0;font-size:12px;color:#8ea0b5}
 .link-out{font-weight:600}
+.example-images {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.example-img {
+  width: 240px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.form-examples {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.form-img {
+  width: 260px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
 </style>
 </head>
 <body>
@@ -112,76 +135,127 @@ textarea{width:100%;min-height:160px;padding:12px;border-radius:10px;border:1px 
         <div class="flowlist">
 <details class="flow-item">
   <summary>1) Курс / мини‑курс, базовый (без Zoom и дипломов)</summary>
-  <div class="step"><strong>Шаг </strong><ul><li>Статусы: бронь → предоплата → оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму (ссылка в чате оплат )</li></ul></div>
+  <div class="step"><strong>Шаг 1 </strong> Статусы: бронь → предоплата → оплата (любая оплата)
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+    </ul></div>
+
  </details>
 <details class="flow-item">
   <summary>2) Онлайн‑поток продан</summary>
-  <div class="step"><strong>Шаг </strong><ul><li>Статусы: бронь → предоплата → оплата → последний чек → полная оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
-<li><a href="https://t.me/+_cglNS4YA70zOTQy" target="_blank">Онлайн‑обучение</a> — подключение к потоку</li></ul></div>
+  <div class="step"><strong>Шаг </strong>
+    Статусы: бронь → предоплата → оплата → последний чек → полная оплата (все оплпты)
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+_cglNS4YA70zOTQy" target="_blank">Онлайн‑обучение</a></li>
+    </ul>
+  </div>
 </details>
 <details class="flow-item">
   <summary>3) Оффлайн продан</summary>
-  <div class="step"><strong>Шаг </strong><ul><li>Статусы: бронь → предоплата → оплата → последний чек → полная оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
-<li><a href="https://t.me/+ple4G9KxQt9mMWFi" target="_blank">Оффлайн‑обучение</a></li></ul></div>
+<div class="step"><strong>Шаг </strong>
+  Статусы: бронь → предоплата → оплата → последний чек → полная оплата (все оплпты)
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+ple4G9KxQt9mMWFi" target="_blank">Оффлайн‑обучение</a></li>
+    </ul>
+  </div>
 </details>
 <details class="flow-item">
   <summary>4) Диплом Mini‑MBA продан</summary>
-  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li></ul></div>
-  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
-<li><a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> (тип диплома: оригинал/электронный)</li></ul></div>
+  <div class="step"><strong>Шаг 1 </strong> Статусы: бронь → предоплата → оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out"href="#pay-form-example"  >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+    </ul></div>
+  <div class="step"><strong>Шаг 2</strong> Статусы: последний чек → полная оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> (тип диплома: оригинал/электронный)</li>
+    </ul></div>
 </details>
 <details class="flow-item">
   <summary>5) Продан премиум</summary>
-  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li></ul></div>
-  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
-<li><a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a></li></ul></div>
+  <div class="step"><strong>Шаг 1 </strong> Статусы: бронь → предоплата → оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+    </ul></div>
+  <div class="step"><strong>Шаг 2</strong> Статусы: последний чек → полная оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li>Из Чата оплат переслать отчет в группу → <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> (тип диплома: оригинал/электронный)</li>
+    </ul></div>
 </details>
 <details class="flow-item">
   <summary>6) Комплекс с Zoom и Mini‑MBA</summary>
-  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li></ul></div>
-  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
-<li><a href="https://t.me/+JJJAcDVQcVVmNWIy" target="_blank">Зумы в мини‑программах</a> + <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a></li></ul></div>
+  <div class="step"><strong>Шаг 1 </strong> Статусы: бронь → предоплата → оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+ple4G9KxQt9mMWFi" target="_blank">Оффлайн‑обучение</a> </li>
+    </ul></div>
+  <div class="step"><strong>Шаг 2</strong> Статусы: последний чек → полная оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+ple4G9KxQt9mMWFi" target="_blank">Оффлайн‑обучение</a> </li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> (тип диплома: оригинал/электронный)</li>
+    </ul></div>
 </details>
 <details class="flow-item">
-  <summary>7) Продажа Global Pro</summary>
-  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
-<li><a href="https://t.me/+Dj0KY9PTAYdhOTQy" target="_blank">Глобал Про — пакеты</a> </li></ul></div>
-  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
-<li><a href="https://t.me/+Dj0KY9PTAYdhOTQy" target="_blank">Глобал Про — пакеты</a> → <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> → <a href="https://t.me/+wpCEF_j-_-E4ODU6" target="_blank">Сертификаты от университета</a></li></ul></div>
+  <summary>7) Продажа Global Pro (Включая програми под ключ)</summary>
+  <div class="step"><strong>Шаг 1 </strong> Статусы: бронь → предоплата → оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out"href="#pay-form-example"  >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+Dj0KY9PTAYdhOTQy" target="_blank">Глобал Про — пакеты</a> </li>
+    </ul></div>
+  <div class="step"><strong>Шаг 2</strong> Статусы: последний чек → полная оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li> Из Чата оплат переслать отчет в группу →<a href="https://t.me/+Dj0KY9PTAYdhOTQy" target="_blank">Глобал Про — пакеты</a> </li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> (тип диплома: оригинал/электронный)</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+wpCEF_j-_-E4ODU6" target="_blank">Сертификаты от университета</a></li>
+    </ul></div>
 </details>
 <details class="flow-item">
   <summary>8) Продажа Global Pro Max</summary>
-  <div class="step"><strong>Шаг 1</strong><ul><li>Статусы: бронь → предоплата → оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
-<li><a href="https://t.me/+Ry7QNJGgmStkMzBi" target="_blank">Глобал Про Макс — пакеты</a></li></ul></div>
-  <div class="step"><strong>Шаг 2</strong><ul><li>Статусы: последний чек → полная оплата</li>
-<li><a class="link-out" href="#pay-group">Чат оплат</a> → заполнить форму</li>
-<li><a href="https://t.me/+Ry7QNJGgmStkMzBi" target="_blank">Глобал Про Макс — пакеты</a> → <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> → <a href="https://t.me/+wpCEF_j-_-E4ODU6" target="_blank">Сертификаты от университета</a></li></ul></div>
-</details>
+  <div class="step"><strong>Шаг 1 </strong> Статусы: бронь → предоплата → оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+Ry7QNJGgmStkMzBi" target="_blank">Глобал Про Макс — пакеты</a> </li>
+    </ul></div>
+  <div class="step"><strong>Шаг 2</strong> Статусы: последний чек → полная оплата
+    <ul>
+      <li><a class="link-out" href="#pay-group">Сформировать отчет по шаблону </a>→ Отправить в чат оплат </li>
+      <li><a class="link-out" href="#pay-form-example" >Заполнить форму по оплате</a> → Ссылка в чате оплат</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+Ry7QNJGgmStkMzBi" target="_blank">Глобал Про Макс — пакеты</a> </li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+BvS4ElfRklI5Zjc6" target="_blank">Группа Мини‑MBA</a> (тип диплома: оригинал/электронный)</li>
+      <li> Из Чата оплат переслать отчет в группу → <a href="https://t.me/+wpCEF_j-_-E4ODU6" target="_blank">Сертификаты от университета</a></li>
+    </ul></div>
+  </details>
 
         </div>
       </section>
 
       <section id="pay-group" class="card">
-        <h2>Группа отдела оплат (первая точка отправки)</h2>
-        <div class="linkbox">
-          <div><span class="dot ok"></span> Сюда — все оплаты, предоплаты, брони</div>
-          <div class="tag">Обязательная</div>
-        </div>
-        <div class="template">
-          <h4>Шаблон отчёта по оплате / предоплате</h4>
-          <textarea readonly>
+  <h2>Группа отдела оплат (первая точка отправки)</h2>
+  <div class="linkbox">
+    <div><span class="dot ok"></span> Сюда — все оплаты, предоплаты, брони</div>
+    <div class="tag">Обязательная</div>
+  </div>
+
+  <div class="template">
+    <h4>Шаблон отчёта по оплате / предоплате</h4>
+    <textarea readonly>
 ФИО клиента: [Фамилия Имя Отчество]
 Email: [email@example.com]
 Ник в Telegram: @[ник]
@@ -202,9 +276,29 @@ Email: [email@example.com]
 Вложения: 
 — Скрин оплаты
 — Скрин программы/пакета (если требуется)
-          </textarea>
-        </div>
-      </section>
+    </textarea>
+  </div>
+
+  <div class="examples">
+    <h4>Примеры вложений и отчётов</h4>
+    <p>Ниже показано, как должен выглядеть корректно оформленный отчёт с прикреплёнными скринами:</p>
+    <div class="example-images">
+      <img src="/imeg/1.jpeg" alt="Пример отчёта по оплате 1" class="example-img">
+      <img src="/imeg/2.jpeg" alt="Пример отчёта по оплате 2" class="example-img">
+    </div>
+  </div>
+</section>
+<section id="pay-form-example" class="card">
+  <h2>Пример заполнения формы</h2>
+  <p>Ссылка на форму находится внутри <strong>чата оплат</strong>. 
+  Этот пример показывает, как правильно её заполнять.</p>
+
+  <div class="form-examples">
+    <img src="/imeg_f/1.jpeg" alt="Пример формы оплаты 1" class="form-img">
+    <img src="/imeg_f/2.jpeg" alt="Пример формы оплаты 2" class="form-img">
+  </div>
+</section>
+
 
       <div class="foot">© Expert X · Хаб чатов менеджера · 18.09.2025</div>
     </main>
